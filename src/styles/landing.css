@@ -1,0 +1,26 @@
+.landing-wrapper{
+    display: flex;
+    min-height: 100vh;
+}
+
+.landing-image {
+    width: 60%;
+    background-color: #0e2045;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+    z-index: -10;
+}
+
+.landing-image img {
+    width: 90%;
+    position: absolute;
+    bottom: -13vh;
+}
+
+@media screen and (max-width: 768px) {
+    .landing-image {
+        display: none;
+    }
+}
