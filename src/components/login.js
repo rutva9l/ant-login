@@ -4,7 +4,6 @@ import '../styles/login.css'
 
 const Login = (props) => {
     const onFinish = async (values) => {
-        console.log('Success:', values);
         await fetch('https://reqres.in/api/login/', {
             headers: { "content-type": "application/json" },
             method: "POST",
@@ -15,7 +14,6 @@ const Login = (props) => {
             .then(data => {
                 if (data.token) toast.success('User logged in')
                 else if (data.error) toast.error(data.error)
-                console.log('response', data)
             });
 
     };
